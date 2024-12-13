@@ -162,3 +162,5 @@ cython_debug/
 #.idea/
 
 *fixation_data_per_part/
+*pre_processed_data/
+experiment_results/
