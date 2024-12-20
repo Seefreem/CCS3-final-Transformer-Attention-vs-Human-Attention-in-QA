@@ -24,6 +24,8 @@ def main(data_file, model):
     # layer level
     print("Model name:", model)
     data_list_with_correlation_scores, best_correlated_layer_index, layer_correlation = layer_level_correlation(data_list)
+    with open('attention_scores.json', 'w') as f:
+        json.dump(data_list, f, indent=4)
     print('The best correlated layer index is:', best_correlated_layer_index)
     print('Layer level correlation table:\n', layer_correlation)
     layer_correlation_filename = "layer_correlation.json"
